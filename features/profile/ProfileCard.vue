@@ -13,4 +13,5 @@ import type { User } from '~/entities/user/model'
 import { getUserProfile } from '~/shared/api/userApi'
 
 const user = ref<User>(getUserProfile())
+
 </script>
