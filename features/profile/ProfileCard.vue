@@ -1,16 +1,13 @@
 <template>
-  <div class="p-4 border rounded">
-    <img :src="user.avatarUrl" alt="User Avatar" class="w-24 h-24 rounded-full" />
-    <h2 class="text-xl font-bold">{{ user.name }}</h2>
-    <p class="text-gray-600">{{ user.bio }}</p>
-    <SharedUiButton text="Edit Profile" />
+  <div v-if="pending">Loading profile...</div>
+  <div v-else-if="error">Failed to load profile 😓</div>
+  <div v-else>
+    <img :src="user?.avatarUrl" />
+    <h2>{{ user?.name }}</h2>
+    <p>{{ user?.bio }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import SharedUiButton from '~/shared/ui/Button.vue'
-import type { User } from '~/entities/user/model'
-import { getUserProfile } from '~/shared/api/userApi'
-
-const user = ref<User>(getUserProfile())
+const { data: user, pending, error } = await useAsyncData('user', () => $fetch('/api/user'))
 </script>
