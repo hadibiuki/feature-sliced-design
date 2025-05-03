@@ -9,5 +9,7 @@
 </template>
 
 <script setup lang="ts">
-const { data: user, pending, error } = await useAsyncData('user', () => $fetch('/api/user'))
+import { useUser } from '~/entities/user/useUser'
+
+const { data: user, pending, error } = await useUser()
 </script>
