@@ -9,4 +9,10 @@ export default defineNuxtConfig({
       apiBase: 'https://i.pravatar.cc',
     },
   },
+  alias: {
+    // Example aliases
+    '~/entities': './entities',
+    '~/shared': './shared',
+    // '@utils': '/<absolute-path-to>/utils',
+  },
 })
