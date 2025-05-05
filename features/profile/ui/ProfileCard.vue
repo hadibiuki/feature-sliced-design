@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { useUser } from '~/entities/user/useUser'
+import { useUser } from '../../../entities/user/useUser'
 
 const { data: user, pending, error } = await useUser()
 </script>
