@@ -6,6 +6,7 @@
     <h2>{{ user?.name }}</h2>
     <p>{{ user?.bio }}</p>
   </div>
+  
 </template>
 
 <script setup lang="ts">
