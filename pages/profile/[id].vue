@@ -10,9 +10,6 @@
 import { useRoute } from 'vue-router'
 import { useUserStore } from '@/entities/user/model/useUserStore'
 import { ProfileCard } from '@/processes/view-profile'
-import Loader from '@/shared/ui/Loader.vue'
-import Error from '@/shared/ui/Error.vue'
-
 const route = useRoute()
 const userStore = useUserStore()
 

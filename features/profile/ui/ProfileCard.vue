@@ -9,6 +9,7 @@
 <script setup lang="ts">
 import type { User } from '~/entities/user/model/types'
 import UserAvatar from '@/entities/user/ui/useAvatar.vue'
+
 defineProps<{
   user: User
 }>()
