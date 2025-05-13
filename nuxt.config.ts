@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   ssr: true,
+  components: [
+    {
+      path: '~/shared/ui',
+      pathPrefix: false,
+    },
+  ],
   modules: ['@nuxt/eslint', '@pinia/nuxt'],
   runtimeConfig: {
     public: {
@@ -11,10 +17,9 @@ export default defineNuxtConfig({
   },
   plugins: ['~/plugins/logger.ts', '~/plugins/toast.ts', '~/plugins/theme.ts'],
   alias: {
-    // Example aliases
-    '~/entities': './entities',
-    '~/shared': './shared',
-    '~/features': './features',
-    // '@utils': '/<absolute-path-to>/utils',
+    '@shared': '/shared',
+    '@entities': '/entities',
+    '@features': '/features',
+    '@processes': '/processes',
   },
 })

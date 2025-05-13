@@ -1,75 +1,18 @@
-# Nuxt Minimal Starter
+# Feature-Sliced Design (FSD)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Layer Overview
 
-## Setup
+- **shared/** — Reusable UI and utilities
+- **entities/** — Business domain logic and components (e.g., User)
+- **features/** — Goal-oriented UI and logic (e.g., ProfileCard)
+- **processes/** — UI + logic for full scenarios (e.g., ViewProfile)
+- **pages/** — Route definitions
 
-Make sure to install dependencies:
+## How to Add a Feature
 
-```bash
-# npm
-npm install
+1. Add domain logic to `entities/`
+2. Create UI logic in `features/[feature]/`
+3. Compose logic in `processes/[scenario]/`
+4. Show in `pages/`
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+> For example: a new “edit profile” feature.
