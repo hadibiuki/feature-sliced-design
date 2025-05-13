@@ -1,16 +1,13 @@
 <template>
-  <ProfileCard v-if="user" :user="user" />
-
+  <NotificationsBell />
   <div>
     <h1 class="text-dark">test for theme change</h1>
   </div>
 </template>
 <script setup lang="ts">
-import { useUser } from '~/entities/user/useUser'
-import ProfileCard from '~/features/profile/ui/ProfileCard.vue'
-// const { $logger: logger, $theme: theme } = useNuxtApp()
+import NotificationsBell from '@features/notifications/ui/NotificationsBell.vue'
 
-const { data: user } = await useUser()
+// const { $logger: logger, $theme: theme } = useNuxtApp()
 
 // logger.log('This is a log log')
 // logger.info('This is an info log')
